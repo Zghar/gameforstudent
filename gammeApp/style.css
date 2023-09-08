@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Nanum+Gothic:wght@700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200&family=Roboto:wght@300;400&family=Work+Sans:ital,wght@0,400;1,300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(50, 50, 59);
+  color: white;
+}
+
+.scrollbtn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e40a4f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    opacity: 0;
+    transition: .4s linear all;
+    
+}
+.container {
+  width: 100%;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* For small devices and above */
+
+.container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.container .header {
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  background-image: url("images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px 50px;
+}
+.container .header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header .nav .nav_brand a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 18px;
+
+  transition: 0.4s linear all;
+}
+.header .nav .nav_brand a::after {
+  content: " ";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #e40a4f;
+}
+.header .nav .nav_brand a::before {
+  content: " ";
+  display: block;
+  top: 0;
+  height: 4px;
+  width: 10px;
+  background-color: #e40a4f;
+}
+/* .header .nav .nav_brand a:hover >::after{
+    width: 100px;
+    background-color: #e40a4f;
+} */
+.header .nav .nav_links {
+  display: flex;
+  gap: 5px;
+  list-style-type: none;
+}
+
+.header .nav .nav_links li {
+  padding: 5px;
+  margin: 5px;
+}
+
+.header .nav .nav_links li a {
+  color: white;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 15pt;
+  padding: 5px;
+  transition: 0.5s linear all;
+}
+.header .nav .nav_links li a:hover {
+  background-color: #e40a4f;
+}
+
+.header .nav .login {
+  display: flex;
+  gap: 5px;
+}
+.header .nav .login button {
+  width: fit-content;
+  height: 30px;
+  padding: 5px 10px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 2px solid #e40a4f;
+  outline: 0;
+  color: white;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.4s linear all;
+}
+.header .nav .login button:hover {
+  background-color: #e40a4f;
+}
+
+.container .header .phone-navbar{
+    display: none;
+}
+
+.header .info_about_us {
+  margin: auto;
+  width: 50%;
+  margin-top: 200px;
+  height: 100%;
+  text-align: center;
+}
+.header .info_about_us h1 {
+  text-transform: capitalize;
+  color: gold;
+}
+.header .info_about_us p {
+  padding: 10px;
+  font-size: 18px;
+}
+.header .info_about_us button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  padding: 10px;
+  background-color: #e40a4f;
+  text-transform: capitalize;
+  font-size: 12pt;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s linear all;
+}
+.header .info_about_us button:hover {
+  background-color: #fe3978;
+  width: 160px;
+}
+.container .our_works .work_title h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+.container .our_works .work_title h1::after {
+  content: " ";
+  display: block;
+  height: 4px;
+  width: 100px;
+  margin: auto;
+  background-color: #e40a4f;
+}
+
+.container .our_works {
+  /* text-align: center; */
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.container .our_works ul {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  text-align: center;
+  background-color: #e40a4f;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  list-style-type: none;
+}
+.container .our_works ul li {
+  margin: 5px;
+  padding: 5px;
+  text-transform: capitalize;
+  transition: 0.4s linear all;
+}
+.container .our_works ul li:hover,
+.active {
+  cursor: pointer;
+  background-color: white;
+  color: #e40a4f;
+  border-radius: 20px;
+}
+.container .our_works .types_of_content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.container .our_works .types_of_content .all {
+  border-radius: 6px;
+  border: 1px solid rgb(230, 229, 229);
+  width: 23%;
+  padding: 5px;
+}
+.container .our_works .types_of_content .all h2 {
+  text-transform: capitalize;
+  text-align: center;
+}
+.our_works .types_of_content .all img {
+  border-radius: 6px;
+  width: 100%;
+}
+.our_works .types_of_content .all p {
+  padding: 5px;
+  color: rgb(163, 161, 161);
+}
+
+.our_works .types_of_content .all .info_about_live .rating span {
+  text-transform: capitalize;
+  color: #fe3978;
+  padding: 5px;
+}
+
+.our_works .types_of_content .all .info_about_live .rating i {
+  color: gold;
+  margin: 2px;
+}
+.our_works .types_of_content .all .info_about_live .views span {
+  color: rgb(165, 155, 155);
+}
+.our_works .types_of_content .all .info_about_live .views i {
+  color: #fe3978;
+  font-size: 14pt;
+}
+.our_works .types_of_content .all button {
+  width: 100px;
+  height: 34px;
+  display: block;
+  margin: auto;
+  border-radius: 6px;
+  background-color: #e40a4f;
+  text-transform: capitalize;
+  color: white;
+  border: none;
+  padding: 5px;
+  margin-top: 3px;
+  cursor: pointer;
+  transition: 0.4s linear all;
+  font-size: 12pt;
+  bottom: 2px;
+}
+.our_works .types_of_content .all button:hover {
+  background-color: white;
+  color: #e40a4f;
+}
+
+@media only screen and (max-width: 888px) {
+  .container .header {
+    padding: 0px;
+  }
+  .container .header .phone-navbar{
+    display: block;
+  }
+
+  .container .header .nav{
+    display: none;
+  }
+  .container .header .phone-navbar {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+   
+  }
+  
+ 
+  .container .header .phone-navbar .menuicon{
+    cursor: pointer;
+    z-index: 99;
+  }
+  .container .header .phone-navbar .menuicon i {
+    font-size: 35px;
+    float: right;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .container .header .phone-navbar .menuicon .fa-xmark{
+    position: absolute;
+    bottom: 10px;
+  }
+  
+  .container .header .phone-navbar .nav-item {
+    background-color: #fe3978;
+    width: 100%;
+    display: block;
+    padding-bottom: 5px;
+    opacity: 0;
+    position: absolute;
+    transition: .4s linear all;
+  }
+
+
+  .container .header .phone-navbar nav .navbrand a {
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: bolder;
+  }
+  .container .header .phone-navbar nav .nav-links li {
+    margin: 10px 0px;
+  }
+  .container .header .phone-navbar nav .nav-links li a{
+color: black;
+text-transform: capitalize;
+
+transition: .4s linear all;
+  }
+  .container .header .phone-navbar nav .nav-links li a:hover{
+margin: 10px;
+color: white;
+  }
+  .container .header .phone-navbar nav .login button{
+    width: fit-content;
+    height: 30px;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid white;
+    outline: 0;
+    color: #e40a4f;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.4s linear all;
+  }
+  .header .info_about_us {
+    width: 100%;
+    padding: 10px;
+  }
+  .container .our_works ul {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .our_works .types_of_content .all {
+    width: 45%;
+    padding: 0px;
+    padding-bottom: 5px;
+  }
+  .our_works .types_of_content .all p {
+    font-size: 13px;
+    padding: 3px;
+    text-align: start;
+  }
+}
+
+@media only screen and (max-width: 458px) {
+  .container .our_works .types_of_content .all {
+    width: 80%;
+  }
+}
